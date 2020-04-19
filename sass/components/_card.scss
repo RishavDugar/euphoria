@@ -35,6 +35,11 @@
             height:37rem;
             transform:translateX(87%);
         }
+        @media screen and (min-width:301px) and (max-width:500px){
+            width:40%;
+            height:31rem;
+            transform:translateX(130%);
+        }
     }
 
     &__most {
@@ -161,8 +166,13 @@
             height:28rem;
         }
         @media screen and (min-width:501px) and (max-width:700px){
-            height:25rem;
-            width:60%;
+            height:35rem;
+            width:70%;
+            margin:0 auto;
+        }
+        @media screen and (min-width:301px) and (max-width:500px){
+            height:18rem;
+            width:90%;
             margin:0 auto;
         }
 
@@ -265,6 +275,9 @@
         }
         @media screen and (min-width:501px) and (max-width:700px){
             height:40rem;
+        }
+        @media screen and (min-width:301px) and (max-width:500px){
+            height:35rem;
         }
     }
 
