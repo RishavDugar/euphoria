@@ -1,0 +1,53 @@
+.text{
+	position: absolute;
+	top:40%;
+	left:50%;
+	transform:translate(-50%,-50%);
+	text-align: center;
+}
+
+.header {
+	height:100vh;
+	background-image:url(../img/intro-bg.jpg) ;
+	//clip-path:polygon(0 0,100% 0, 95% 95%, 0 100%);
+	opacity:1;
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	z-index:60;
+
+	&__logo {
+		@include abs;
+		text-align:center;
+		font-family: Noto;
+		position: relative;
+		
+		
+		&-primary{
+			font-size:12rem;
+			color:transparent;
+			background-image: url(../img/title-bg.jpg);
+			filter:brightness(150%);
+			-webkit-background-clip: text;
+			background-clip: text;;
+			-webkit-text-stroke-color:black;
+			-webkit-text-stroke-width:1px;
+			text-shadow:0 1rem 4rem rgba($color-violet-dark,0.6);
+			position:relative;
+			top:5rem;
+			animation: intro 0.4s 0.6s ease-out;
+		}
+
+		&-secondary{
+			font-size: 6rem;
+			color:$color-violet-light;
+			-webkit-text-stroke-color:black;
+			-webkit-text-stroke-width:1px;
+			position:relative;
+			top:5rem;
+			animation: intro 0.4s 0.6s ease-out;
+			text-shadow:0 1rem 4rem rgba($color-violet-light,0.6);
+		}
+	}
+
+}

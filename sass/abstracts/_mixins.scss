@@ -1,0 +1,117 @@
+@mixin clearfix{
+    &::after{
+    content: "";
+    display:table;
+    clear:both;
+    }
+}
+
+@mixin abs{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+
+@mixin respond($breakpoint){
+    @if $breakpoint==small-phone {
+        @media(max-width:24.375em){@content};
+    }
+    @if $breakpoint==normal-phone {
+        @media(max-width:31.25em){@content};
+    }
+    @if $breakpoint==small-tablet {
+        @media(max-width:43.75em){@content};
+    }
+    @if $breakpoint==large-tablet {
+        @media(max-width:56.25em){@content};
+    }
+    @if $breakpoint==small-laptop {
+        @media(max-width:67.5em){@content};
+    }
+    @if $breakpoint==large-laptop {
+        @media(max-width:86em){@content};
+    }
+    @if $breakpoint==desktop {
+        @media(min-width:86em){@content};
+    }
+}
+
+@mixin popup{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100vh;
+    z-index:200;
+    background-image: url(../img/popup.jpg);
+    background-size: cover;
+    transition:all 0.3s;
+    opacity:0;
+    visibility: hidden;
+
+    &__content-box{
+        height:60%;
+        width:60%;
+        border-radius:2rem;
+        @include abs;
+        background-color: rgb(238, 236, 236);
+        padding:2rem;
+        position: relative;
+    }
+    
+
+    &__right {
+        height:100%;
+        width:59%;
+        float:right;
+        position: relative;
+
+
+        &__content {
+            
+            height:75%;
+            width:95%;
+            position:absolute;
+            bottom:3%;
+            left:50%;
+            transform:translateX(-50%);
+
+            &__list {
+                padding:1rem 1rem 1rem 3rem;
+            }
+            
+            &__item{
+                color:$color-grey-darker;
+                font-size: 1.8rem;
+                width:95%;
+            }
+        
+        }
+    }
+
+    &__close {
+        position:absolute;
+        right:2%;
+        top:2%;
+        font-size: 2.1rem;
+        font-weight: 900;
+        display:inline-block;
+        transition:all 0.2s;
+        text-decoration: none;
+        padding:0.1rem 0.5rem;
+        border-radius:1px;
+
+        &:hover {
+            background-color: red;
+            color:white;
+            transform:scale(1.08);
+            box-shadow:0 0.2rem 0.5rem rgba(black,0.25);
+        }
+    }
+
+    &:target {
+        opacity:1;
+        visibility: visible;
+    }
+}

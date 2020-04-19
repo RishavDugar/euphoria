@@ -1,0 +1,41 @@
+*,
+*::after,
+*::before {
+	margin:0;
+	padding:0;
+	box-sizing: inherit; 
+}
+
+html{
+	font-size:62.5%; 
+	scroll-behavior: smooth;
+
+	@include respond(large-laptop){
+		font-size:50%;
+	}
+	@include respond(small-laptop){
+		font-size:43.75%;
+	}
+	@include respond(large-tablet){
+		font-size:31.25%;
+	}
+	@include respond(small-tablet){
+		font-size:25%;
+	}
+	@include respond(large-phone){
+		font-size:12.5%;
+	}
+	@include respond(small-phone){
+		font-size:6.25%;
+	}
+	@include respond(desktop){
+		font-size:62.5%;
+	}
+}
+
+body {
+	box-sizing: border-box;
+	font-family: Lato;
+	font-weight:400;
+	color:$color-grey-light;
+} 

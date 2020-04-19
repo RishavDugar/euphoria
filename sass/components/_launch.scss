@@ -1,0 +1,89 @@
+.launch{
+
+    &__product {
+        position:absolute;
+        border-radius: 1.5rem;
+        display:inline-block;
+        transition: all 0.4s;
+        height:40%;
+        width:20%;
+        background-size: cover;
+        display:inline-block;
+        background-size: cover;
+        background-position:center;
+        border: 1px solid $color-grey-light;
+        top:50%;
+        left:50%;
+        z-index:5;
+
+
+    &--1 {
+        
+        background-image: url(../img/coming_soon1.jpg);
+        
+        transform: translate(-200%,-35%);
+        &:hover {
+            transform:scale(1.05) translate(-200%,-35%);
+            outline:5px solid $color-grey-lighter;
+            outline-offset: 1rem;
+            z-index:6;
+        }
+    }
+    &--2 {
+        
+        background-image: url(../img/coming_soon2.jpg);
+        
+        transform: translate(0,-45%);
+        transform: translate(-125%,-35%);
+        &:hover {
+            transform:scale(1.05) translate(-125%,-35%);
+            outline:5px solid $color-grey-lighter;
+            outline-offset: 1rem;
+            z-index:6;
+        }
+    }
+    &--3 {
+        
+        background-image: url(../img/coming_soon3.jpg);
+        
+        transform: translate(-50%,-35%);
+        &:hover {
+            transform:scale(1.05) translate(-50%,-35%);
+            outline:5px solid $color-grey-lighter;
+            outline-offset: 1rem;
+            z-index:6;
+        }
+
+    }
+    &--4 {
+        
+        background-image: url(../img/coming_soon4.jpg);
+        transform: translate(25%,-35%);
+        &:hover {
+            transform:scale(1.05) translate(25%,-35%);
+            outline:5px solid $color-grey-lighter;
+            outline-offset: 1rem;
+            z-index:6;
+        }
+    }
+    &--5 {
+
+        background-image: url(../img/coming_soon5.jpg);
+        transform: translate(100%,-35%);
+        &:hover {
+            transform:scale(1.05) translate(100%,-35%);
+            outline:5px solid $color-grey-lighter;
+            outline-offset: 1rem;
+            z-index:6;
+        }
+    }
+    }
+
+    &:hover  &__product:not(:hover){
+        filter:blur(0.5rem);
+        height:37%;
+        width:18.5%;
+        
+    }
+    
+}

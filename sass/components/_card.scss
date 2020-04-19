@@ -1,0 +1,200 @@
+.card {
+
+    
+    background-color: white;
+    box-shadow:0 2rem 4rem rgba(black,0.3);
+    border-radius: 1rem;
+    padding: 2rem 2rem 0 2rem;
+    transition:all 0.2s;
+    
+    &__surprise {
+        width:100%;
+        height:42rem;
+    }
+
+    &__most {
+        width:115%;
+        height:30rem;
+        position:relative;
+        background-color:rgba($color-violet-light,0.5);
+        padding:2rem 1rem 2rem 1rem;
+
+        &__picture {
+            width:14rem;
+            height:14rem;
+            @include abs;
+            transform:translate(-50%,-80%);
+            border-radius:50%;
+            background-size: cover;
+            background-position: center;
+
+            &--1 {
+                background-image: url(../img/most1.jpg);
+            }
+            &--2 {
+                background-image: url(../img/most2.jpg);
+            }
+            &--3 {
+                background-image: url(../img/most3.jpg);
+            }
+            &--4 {
+                background-image: url(../img/most4.jpg);
+            }
+            &--5 {
+                background-image: url(../img/most5.jpg);
+            }
+            &--6 {
+                background-image: url(../img/most6.jpg);
+            }
+            &--7 {
+                background-image: url(../img/most7.jpg);
+            }
+            &--8 {
+                background-image: url(../img/most8.jpg);
+            }
+            &--9 {
+                background-image: url(../img/most9.jpg);
+            }
+            &--10 {
+                background-image: url(../img/most10.jpg);
+            }
+        }
+    }
+
+    &__picture{
+        width: 100%;
+        height:30rem;
+        padding:0.5rem;
+
+        &--1{
+            background-image: url(../img/surprise1.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+
+        &--2{
+            background-image: url(../img/surprise2.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+
+        &--3{
+            background-image: url(../img/surprise3.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+
+    }
+
+    &__list {
+        list-style:none;
+        padding:2rem 0 0.75rem 0;
+    }
+
+    &__item {
+        text-transform: uppercase;
+        text-decoration: none;
+        font-size:1.4rem;
+        color:$color-grey-light;
+
+        &__most {
+            color:white;
+            font-size: 1.5rem;
+            padding:0;
+            transform:translateY(15rem);
+        }
+    }
+
+    &__button,
+    &__button:link,
+    &__button:visited {
+        padding:0.4rem 1rem 0.4rem 1rem;
+        text-transform : uppercase;
+        text-decoration: none;
+        background-color: white;
+        border-radius: 5px;
+        transition:all 0;
+        display:inline-block;
+        visibility: hidden;
+    }
+
+    &__button:hover {
+        background-color: $color-violet-dark;
+        color:white;
+    }
+
+    &__surprise:hover &__button {
+        visibility: visible;
+    }
+
+    &__surprise:hover{
+        height:45rem;
+    }
+
+
+
+    &__review {
+        width:80%;
+        height:100%;
+        margin:0 auto;
+        background-color: $color-violet-dark;
+        padding:1rem;
+        margin-top:5%;
+
+        &__img {
+            height:100%;
+            width:25%;
+            float:left;
+            background-size: cover;
+            background-position: center;
+            margin-right:1.5rem;
+            background-color:white;
+
+            &--1{
+                background-image: url(../img/customer1.jpg);
+
+                &:hover {
+                    filter:blur(0.5rem);
+                }
+            }
+
+            &--2{
+                background-image: url(../img/customer2.jpg);
+
+                &:hover {
+                    filter:blur(0.5rem) brightness(120%);
+                }
+            }
+
+            &__name {
+                position:absolute;
+                top:50%;
+                left:21%;
+                transform: translate(-50%,-50%);
+                font-size:2.4rem;
+                color:$color-grey-darker;
+                -webkit-text-stroke-color: black;
+                -webkit-text-stroke-width: 1px;
+                visibility: hidden;
+            }
+
+            &:hover ~ &__name{
+                visibility:visible;
+            }
+        }
+
+        
+
+        &__content {
+            color: white;
+            font-size:2rem;
+            text-align:center;
+            margin:1.5rem auto;
+            //float: right;
+        }
+    }
+}
+
+.stars {
+    font-size: 1.2rem;
+}

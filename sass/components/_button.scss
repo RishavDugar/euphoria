@@ -1,0 +1,112 @@
+.button {
+    &,
+    &:link,
+    &:visited {
+        text-transform : uppercase;
+        text-decoration: none;
+        padding:1.5rem 3rem;
+        font-size: 1.5rem;
+        background-color: white;
+        border-radius: 5px;
+        transition:all 0.2s;
+        display:inline-block;
+    }
+
+    &:hover {
+        background-color: $color-violet-dark;
+        color:white;
+        box-shadow:0 1rem 2rem rgba($color-violet-light,0.5);
+        transform:translateY(-1rem);
+    }
+
+    &:active {
+        background-color: white;
+        box-shadow:0 0.5rem 1rem rgba($color-violet-light,0.5);
+        transform:translateY(-0.5rem);
+        outline:solid 2px rgba(255, 255, 255, 0.747);
+        outline-offset: 1rem;
+    }
+
+    &__square{
+
+    &::after {
+
+        content: "";
+        display: inline-block;
+        background-color: transparent;
+        width:150%;
+        height:200%;
+        @include abs;
+        z-index:-1;
+    }
+
+    
+    &:active::after {
+        outline:solid 3px rgba(255, 255, 255, 0.582);
+        outline-offset: 1.5rem;
+        border: 2px solid rgba(255, 255, 255, 0.582);
+    }
+    }
+
+    &__intro {
+        position:relative;
+        top:11rem;
+        animation: intro 0.4s 0.6s ease-out;
+    }
+
+    &__form {
+        position: absolute;
+        left:5%;
+    }
+
+    &__top {
+        position: absolute;
+        right:5%;
+        bottom:5%;
+        font-size: 4rem;
+        height:6rem;
+        width:6rem;
+        padding:0;
+        border-radius: 50%;
+        text-align:center;
+
+        &:active {
+            outline:none;
+        }
+    }
+    &__ham {
+        position: absolute;
+        right:5%;
+        top:5%;
+        font-size: 4rem;
+        height:6rem;
+        width:6rem;
+        padding:0;
+        background-image:radial-gradient(pink,green);
+        color:$color-grey-dark;
+        border-radius: 50%;
+        text-align:center;
+        z-index:110;
+
+        
+
+        &:hover{
+            transform:scale(1.5);
+        }
+
+        &__background{
+            height:100%;
+            width:100%;
+            border-radius:50%;
+            background-color: white;
+            position: absolute;
+            top:0;
+            left:0;
+            color:$color-grey-dark;
+        }
+
+        &:active {
+            transform:scale(80);
+        }
+    }
+}

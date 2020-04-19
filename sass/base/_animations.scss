@@ -1,0 +1,115 @@
+@keyframes covid {
+    0% {
+        transform:skew(0,0);
+        background-color: wheat;
+    }
+    25% {
+        transform:skew(2deg,3deg) scale(1.2);
+        font-weight: 900;
+        color:purple;
+        background-color: wheat;
+    }
+    50% {
+        transform:skew(0,0) scale(1.5);
+        font-weight: 900;
+        color:purple;
+        background-color: wheat;
+    }
+    75% {
+        transform:skew(-2deg,-3deg) scale(1.2);
+        font-weight: 900;
+        color:purple;
+        background-color: wheat;
+    }
+    100% {
+        transform:skew(0,0);
+        background-color: wheat;
+    }
+}
+
+@keyframes intro {
+    0% {
+        transform:scale(0.9);
+        opacity:0;
+    }
+
+    50%{
+        transform:scale(0.95) skewX(7deg);
+        opacity:0;
+    }
+    100% {
+        transform:scale(1);
+        opacity:1;
+    }
+}
+
+@keyframes rotate {
+    0%{
+        transform:rotate(0);
+    }
+    25%{
+        transform:rotate(20deg);
+    }
+    50%{
+        transform:rotate(0);
+    }
+    75%{
+        transform:rotate(-20deg);
+    }
+    100%{
+        transform:rotate(0);
+    }
+}
+
+@keyframes front{
+    0%{
+        transform: rotate(0);
+    }
+    
+    50%{
+        transform: rotate(4deg);
+    }
+    
+    100%{
+        transform: rotate(0);
+    }
+} 
+
+@keyframes hind{
+    0%{
+        transform: rotate(0deg);
+    }
+    
+    50%{
+        transform: rotate(3deg);
+    }
+    
+    100%{
+        transform: rotate(0);
+    }
+} 
+@keyframes hind2{
+    0%{
+        transform: rotate(0deg);
+    }
+    
+    50%{
+        transform: rotate(1deg);
+    }
+    
+    100%{
+        transform: rotate(0);
+    }
+} 
+
+@keyframes head{
+    0%{
+        transform:rotate(0deg);
+    }
+    50%{
+        transform:rotate(-2deg);
+    }
+    100%{
+        transform:rotate(0deg);
+    }
+}

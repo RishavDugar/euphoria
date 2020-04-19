@@ -1,0 +1,40 @@
+.popup {
+    
+    @include popup;
+
+        &__left1 {
+            height:100%;
+            width:40%;
+            background-image: url(../img/surprise1.jpg);
+            background-size: cover;
+            background-position: center;
+            border-radius:2rem;
+            float:left;
+        
+        }
+
+        
+        &__left2 {
+            height:100%;
+            width:40%;
+            background-image: url(../img/surprise2.jpg);
+            background-size: cover;
+            background-position: center;
+            border-radius:2rem;
+            float:left;
+        
+        }
+
+        
+        &__left3 {
+            height:100%;
+            width:40%;
+            background-image: url(../img/surprise3.jpg);
+            background-size: cover;
+            background-position: center;
+            border-radius:2rem;
+            float:left;
+        
+        }
+    
+}

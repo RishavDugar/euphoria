@@ -1,0 +1,17 @@
+.clipper {
+    height:100vh;
+    width:100%;
+    background-color: #39ff14;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 95% 95%,0 100%, 5% 5% );
+    
+}
+
+.clipper-background {
+    z-index:-1;
+    height:100vh;
+    width:100%;
+    background-color: $color-grey-dark;
+    position:absolute;
+    top:0;
+    left:0;
+}
