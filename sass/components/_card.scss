@@ -5,28 +5,111 @@
     box-shadow:0 2rem 4rem rgba(black,0.3);
     border-radius: 1rem;
     padding: 2rem 2rem 0 2rem;
-    transition:all 0.2s;
+    transition: all 0.2s;
     
     &__surprise {
         width:100%;
         height:42rem;
+        
+            
+        
+
+        @media screen and (min-width:1377px){
+            width:95%;
+            height:37rem;
+        }
+        @media screen and (min-width:1081px)and (max-width:1376px){
+            margin-top: -15%;
+        }
+        @media screen and (min-width:901px) and (max-width:1080px){
+            width:90%;
+            height:40rem;
+        }
+
+        @media screen and (min-width:701px) and (max-width:900px){
+            width:95%;
+            height:42rem;
+        }
+        @media screen and (min-width:501px) and (max-width:700px){
+            width:40%;
+            height:37rem;
+            transform:translateX(87%);
+        }
     }
 
     &__most {
         width:115%;
         height:30rem;
+
+        @media screen and (min-width:1377px){
+            height:21rem;
+            width:85%;
+        }
+
+        @media screen and (min-width:1081px) and (max-width:1376px){
+            height:22rem;
+            width:100%;
+        }
+
+
+        @media screen and (min-width:901px) and (max-width:1080px){
+            height:24rem;
+            width:100%;
+        }
+
+        @media screen and (min-width:701px) and (max-width:900px){
+            height:33rem;
+            width:110%;
+        }
+        @media screen and (min-width:501px) and (max-width:700px){
+            height:24rem;
+            width:100%;
+        }
+
         position:relative;
         background-color:rgba($color-violet-light,0.5);
         padding:2rem 1rem 2rem 1rem;
 
+        &__vacant {
+            display:none;
+        }
         &__picture {
-            width:14rem;
+            width: 14rem;
             height:14rem;
             @include abs;
             transform:translate(-50%,-80%);
             border-radius:50%;
             background-size: cover;
             background-position: center;
+
+            @media screen and (min-width:1377px){
+                width:8rem;
+                height:8rem;
+                transform:translate(-50%,-105%);
+            }
+            @media screen and (min-width:1081px) and (max-width:1376px){
+                width:10rem;
+                height:10rem;
+                transform: translate(-50%,-97%);
+            }
+
+            @media screen and (min-width:901px) and (max-width:1080px){
+                width:10rem;
+                height:10rem;
+                transform: translate(-50%,-97%);
+            }
+
+            @media screen and (min-width:701px) and (max-width:900px){
+                width:17rem;
+                height:17rem;
+                transform: translate(-50%,-87%);
+            }
+            @media screen and (min-width:501px) and (max-width:700px){
+                width:60%;
+                height:12rem;
+                border-radius: 0;
+                transform:translate(-50%,-87%);
+            }
 
             &--1 {
                 background-image: url(../img/most1.jpg);
@@ -66,10 +149,30 @@
         height:30rem;
         padding:0.5rem;
 
+        @media screen and (min-width:1377px){
+            height:25rem;
+        }
+
+        @media screen and (min-width:901px) and (max-width:1080px){
+            height:27rem;
+        }
+        
+        @media screen and (min-width:701px) and (max-width:900px){
+            height:28rem;
+        }
+        @media screen and (min-width:501px) and (max-width:700px){
+            height:25rem;
+            width:60%;
+            margin:0 auto;
+        }
+
         &--1{
             background-image: url(../img/surprise1.jpg);
             background-size: cover;
             background-position: center;
+            @media screen and (min-width:701px) and (max-width:900px){
+                background-position: right;
+            }
         }
 
         &--2{
@@ -102,6 +205,26 @@
             font-size: 1.5rem;
             padding:0;
             transform:translateY(15rem);
+
+            @media screen and (min-width:1377px){
+                transform:translateY(7rem);
+            }
+
+            @media screen and (min-width:1081px) and (max-width:1376px){
+    
+                transform: translateY(8rem);
+            }
+
+            @media screen and (min-width:901px) and (max-width:1080px){
+                transform: translateY(10rem);
+            }
+
+            @media screen and (min-width:701px) and (max-width:900px){
+                transform: translateY(18rem);
+            }
+            @media screen and (min-width:501px) and (max-width:700px){
+                transform: translateY(12rem);
+            }
         }
     }
 
@@ -129,7 +252,23 @@
 
     &__surprise:hover{
         height:45rem;
+
+        @media screen and (min-width:1377px){
+            height:40rem;
+        }
+        @media screen and (min-width:901px) and (max-width:1080px){
+            height:43rem;
+        }
+        
+        @media screen and (min-width:701px) and (max-width:900px){
+            height:45rem;
+        }
+        @media screen and (min-width:501px) and (max-width:700px){
+            height:40rem;
+        }
     }
+
+    
 
 
 
@@ -191,6 +330,11 @@
             text-align:center;
             margin:1.5rem auto;
             //float: right;
+
+            &__head {
+                font-size:2.2rem;
+                text-transform: uppercase;
+            }
         }
     }
 }

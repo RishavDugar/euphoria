@@ -23,10 +23,10 @@ html{
 		font-size:25%;
 	}
 	@include respond(large-phone){
-		font-size:12.5%;
+		font-size:20%;
 	}
 	@include respond(small-phone){
-		font-size:6.25%;
+		font-size:20%;
 	}
 	@include respond(desktop){
 		font-size:62.5%;

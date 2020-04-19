@@ -5,26 +5,87 @@
 
     &__surprise{
         height:36rem;
-        transform: translateY(-200%);
+        transform: translateY(-70vh);
+
+        @media screen and (min-width:1377px){
+            transform:translateY(-75vh);
+            height:30rem;
+        }
+        @media screen and (min-width:501px) and (max-width:700px){
+            height:44rem;
+            transform:translateY(-90vh);
+        }
+
+    
     }
 
     &__most{
         height:35rem;
-        transform: translateY(-210%);
+        transform: translate(0,-77vh);
+        @media screen and (min-width:1377px){
+            //transform:translateY(-185%);
+            height:30rem;
+        }
+        @media screen and (min-width:1081px) and (max-width:1376px){
+            height:25rem;
+        }
+
+        @media screen and (min-width:901px) and (max-width:1080px){
+            height:25rem;
+        }
+
+        @media screen and (min-width:701px) and (max-width:900px){
+            height:40rem;
+        }
+        @media screen and (min-width:501px) and (max-width:700px){
+            transform: translate(6vw,-90vh);
+            height:28rem;
+        }
+        
     }
 
     &__review{
         height:27rem;
-        transform:translateY(-290%);
+        transform:translateY(-77vh);
+
+        @media screen and (min-width:1377px){
+            transform:translateY(-81vh);
+            height:23rem;
+        }
+        @media screen and (min-width:1081px) and (max-width:1376px){
+            height:20rem;
+            transform: translateY(-81vh);
+        }
+        @media screen and (min-width:901px) and (max-width:1080px){
+            margin-top:-1%;
+            height:27rem;
+            padding-left: calc(#{$gutter-horizontal-small} * 0.5 );
+        }
     }
 
     &__form {
-        margin-bottom: 0;
-        margin-top:12%;
+        margin:12% 0 0 12%;
+        transform: translateY(3vh);
+
     }
 
     &:not(:last-child) {
         margin-bottom: $gutter-vertical;
+
+        @media screen and (min-width:1377px){
+            margin-bottom:-4.5rem;
+        }
+
+        @media screen and (min-width:901px) and (max-width:1080px){
+            margin-bottom:3%;
+        }
+
+        /*@media screen and (min-width:701px) and (max-width:900px){
+            margin-bottom:1rem;
+        }*/
+        @media screen and (min-width:501px) and (max-width:700px){
+            margin-bottom: 0;
+        }
     }
 
     [class^="col-"] {
@@ -33,8 +94,19 @@
         padding-bottom:0;
         &:not(:last-child) {
             margin-right: $gutter-horizontal;
+
+            @media screen and (min-width:901px) and (max-width:1080px){
+                margin-right: $gutter-horizontal-small;
+            }
+
+            @media screen and (min-width:701px) and (max-width:900px){
+                margin-right: $gutter-horizontal-small;
+            }
+
         }
         height:100%;
+
+        
     }
 
     @include clearfix;
@@ -45,6 +117,14 @@
 
     .col-1-of-3{
         width:calc(( 100% - 2 * #{$gutter-horizontal}) / 3);
+
+        @media screen and (min-width:701px) and (max-width:900px){
+            width:46%;
+        }
+
+        @media screen and (min-width:501px) and (max-width:700px){
+            width:90%;
+        }
     }
 
     .col-2-of-3{
@@ -57,6 +137,43 @@
 
     .col-1-of-5{
         width:calc(( 100% - 4 * #{$gutter-horizontal}) * 0.2);
+
+        @media screen and (min-width:901px) and (max-width:1080px){
+            width:calc(( 100% - 4 * #{$gutter-horizontal-small}) * 0.2);
+        }
+        @media screen and (min-width:501px) and (max-width:700px){
+            width:35%;
+            margin-right:7rem !important;
+        }
+    }
+}
+
+.surprise{
+    
+    &--1{
+        @media screen and (min-width:701px) and (max-width:900px){
+            position:absolute;
+            top:-55%;
+            left:-2%;
+            
+        }
+    }
+    &--2{
+        @media screen and (min-width:701px) and (max-width:900px){
+            position:absolute;
+            top:-55%;
+            right:-2%;
+            
+        }
+    }
+    &--3{
+        @media screen and (min-width:701px) and (max-width:900px){
+            position:absolute;
+            top:75%;
+            left:50%;
+            transform:translateX(-50%);
+            
+        }
     }
 }
 

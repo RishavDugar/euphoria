@@ -7,6 +7,16 @@
     width:50%;
     background-size: cover;
     z-index:50;
+
+    @if respond(desktop){
+        right:2%;
+        transform: translateY(-40%);
+    }
+    @media screen and (min-width:301px) and (max-width:500px){
+        transform:translate(-12vw,-20vh);
+        height:100%;
+        width:70%;
+    }
 }
 
 svg{

@@ -16,6 +16,10 @@
 	position: relative;
 	z-index:60;
 
+	@media screen and (min-width:301px) and (max-width:500px){
+		background-position: right;
+	}
+
 	&__logo {
 		@include abs;
 		text-align:center;
@@ -36,6 +40,13 @@
 			position:relative;
 			top:5rem;
 			animation: intro 0.4s 0.6s ease-out;
+
+			@media screen and (min-width:701px) and (max-width:900px){
+				font-size:18rem;
+			}
+			@media screen and (min-width:501px) and (max-width:700px){
+				font-size:24rem;
+			}
 		}
 
 		&-secondary{
@@ -47,6 +58,13 @@
 			top:5rem;
 			animation: intro 0.4s 0.6s ease-out;
 			text-shadow:0 1rem 4rem rgba($color-violet-light,0.6);
+
+			@media screen and (min-width:701px) and (max-width:900px){
+				font-size:10rem;
+			}
+			@media screen and (min-width:501px) and (max-width:700px){
+				font-size:14rem;
+			}
 		}
 	}
 

@@ -19,9 +19,13 @@
     }
 
     &__popup {
-        transform: skewX(-10deg) ;
+        transform: skewX(-10deg) translateX(0) ;
         font-size:2rem;
         float:left;
+
+                @media screen and (min-width:1377px){
+            transform:skewX(-10deg) translate(-15%,-5%);
+        }
     }
 }
 
@@ -40,6 +44,11 @@
     text-align:center;
     background-color: wheat;
     padding:3px 6px;
+
+            @media screen and (min-width:1377px){
+        font-size:1.8rem;
+        transform:translate(-50%,-1.5rem) ;
+    }
 }
 
 .heading__surprises--text {
